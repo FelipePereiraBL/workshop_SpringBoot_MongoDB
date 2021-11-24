@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.felipe.course.domain.User;
+import com.felipe.course.dto.AutorDTO;
 import com.felipe.course.dto.UserDTO;
 import com.felipe.course.services.UserService;
 
@@ -33,6 +34,7 @@ public class UserResource
 		List<User>list=service.findAll();
 		
 		List<UserDTO>listDto=list.stream().map(X->new UserDTO(X)).collect(Collectors.toList());
+		//List<AutorDTO>listDto=list.stream().map(X->new AutorDTO(X)).collect(Collectors.toList());
 		
 		return ResponseEntity.ok().body(listDto);
 	}

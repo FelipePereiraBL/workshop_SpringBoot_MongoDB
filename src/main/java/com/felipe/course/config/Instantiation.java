@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.felipe.course.domain.Post;
 import com.felipe.course.domain.User;
+import com.felipe.course.dto.AutorDTO;
 import com.felipe.course.repository.PostRepository;
 import com.felipe.course.repository.UserRepository;
 
@@ -42,8 +43,8 @@ public class Instantiation implements CommandLineRunner
 		
 		postRepository.deleteAll();
 		
-		Post post1=new Post(null, sdf.parse("21/03/2018"), "Partiu Viagem", "Vou viajar para São Paulo, abraços !",maria);
-		Post post2=new Post(null, sdf.parse("21/03/2018"), "Bom Dia !", "Acordei feliz hoje !",maria);
+		Post post1=new Post(null, sdf.parse("21/03/2018"), "Partiu Viagem", "Vou viajar para São Paulo, abraços !",new AutorDTO(maria));
+		Post post2=new Post(null, sdf.parse("21/03/2018"), "Bom Dia !", "Acordei feliz hoje !",new AutorDTO(maria));
 		
 		postRepository.saveAll(Arrays.asList(post1,post2));
 		
