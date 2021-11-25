@@ -45,7 +45,7 @@ public class Instantiation implements CommandLineRunner
 		postRepository.deleteAll();
 		
 		Post post1=new Post(null, sdf.parse("21/03/2018"), "Partiu Viagem", "Vou viajar para São Paulo, abraços !",new AutorDTO(maria));
-		Post post2=new Post(null, sdf.parse("21/03/2018"), "Bom Dia !", "Acordei feliz hoje !",new AutorDTO(maria));
+		Post post2=new Post(null, sdf.parse("22/03/2022"), "Bom Dia !", "Acordei feliz hoje !",new AutorDTO(maria));
 		
 		/////////////////////////////////////////////
 		//Salvando comentarios
