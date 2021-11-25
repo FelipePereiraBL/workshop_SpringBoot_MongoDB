@@ -34,7 +34,6 @@ public class UserResource
 		List<User>list=service.findAll();
 		
 		List<UserDTO>listDto=list.stream().map(X->new UserDTO(X)).collect(Collectors.toList());
-		//List<AutorDTO>listDto=list.stream().map(X->new AutorDTO(X)).collect(Collectors.toList());
 		
 		return ResponseEntity.ok().body(listDto);
 	}
